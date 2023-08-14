@@ -1,0 +1,60 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/container.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="header"><h1>AUTO <span>TAK</span></h1></div>
+        <div class="splitter">  
+        <div class="div1">
+            <a href="{% url 'cars' %}">Cars</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About Us</a>
+        </div>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <button id="btn" class="btn"></button>
+        </div>
+    </div>
+    </nav>
+    <section>
+        <div class="container">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1619.5086319443587!2d50.99384935195169!3d35.72579394160896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8d95b4000b661d%3A0xb9498ac990ee51a5!2z2YbZhdin24zYtNqv2KfZhyDYp9iq2YjZhdio24zZhCDYqtqp!5e0!3m2!1sen!2s!4v1691242985310!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact">
+                <p>{{contact.name}}</p>
+                <p>{{contact.name_owner}}</p>
+                <p>{{contact.parag1}}</p>
+                <p>{{contact.parag2}}</p>
+                <p>{{contact.number1}}</p>
+                <p>{{contact.number2}}</p>
+                <div class="icon">
+                    <a href="https://instagram.com/auto.takk?igshid=MzRlODBiNWFlZA=="><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+    
+    <div class="slider"  id="slider">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'cars' %}">Cars</a>
+        <a href="{% url 'about' %}">About Us</a>
+        <button id="close" class="close"></button>
+        
+    </div>
+    <script src="{%static 'css/mind.js'%}"></script>
+</body>
+</html>

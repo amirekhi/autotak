@@ -1,0 +1,94 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="header"><h1>AUTO <span>TAK</span></h1></div>
+        <div class="splitter">  
+        <div class="div1">
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'cars' %}">Cars</a>
+            <a href="{% url 'about' %}">About Us</a>
+        </div>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <button id="btn" class="btn"></button>
+        </div>
+    </div>
+    </nav>
+
+
+
+
+    <section class="sec1">
+        <div class="container">
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?cs=srgb&dl=pexels-mike-bird-112460.jpg&fm=jpg" alt="">
+                <h3>{{home.nameone}}</h3>
+                <p>{{home.paragone}}</p>
+                <div class="button"><a href="./cars.html">More</a></div>
+
+            </div>
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/907671144/photo/new-black-metallic-sedan-car-in-spotlight-modern-desing-brandless.jpg?s=612x612&w=0&k=20&c=21WCXCFFvFYtO9-0UiAhNH8xaC8p12IT9_dNHqm9klk=" alt="">
+                <h3>{{home.nametwo}}</h3>
+                <p>{{home.paragtwo}}</p>
+                <div class="button"><a href="./cars.html">More</a></div>
+
+        </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?cs=srgb&dl=pexels-mike-bird-3729464.jpg&fm=jpg" alt="">
+                <h3>{{home.namethree}}</h3>
+                 <p>{{home.paragthree}}</p>
+                  <div class="button"><a href="./cars.html">More</a></div>
+            </div>
+
+
+
+        </div>
+        
+    <div class="slider"  id="slider">
+        <a href="{% url 'contact' %}">Contact Us</a>
+        <a href="{% url 'cars' %}">Cars</a>
+        <a href="{% url 'about' %}">About Us</a>
+        <button id="close" class="close"></button>
+        
+    </div>
+    </section>
+
+    <section class="sec2" >
+        <div id="container2" class="container2">
+            <h2>Ne<span>ma</span>ti</h2>
+            <p>{{home.paragerafe_asli}}</p>
+        </div>
+        
+  <footer>
+    <div class="links">
+      <a href="https://instagram.com/auto.takk?igshid=MzRlODBiNWFlZA=="><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      
+    </div>
+
+    <div class="copy">
+     <p>&copy; Copy right </p>
+    </div>
+
+</footer>
+    </section>
+    
+<script src="{% static 'css/mind.js' %}"> </script>    
+</body>
+</html>
